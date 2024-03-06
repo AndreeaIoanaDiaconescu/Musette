@@ -10,6 +10,24 @@ public class SignInTest extends BaseTest {
 
     @Test
     public void signIn() {
+        String email = "ciascai.andreea@gmail.com";
+        String password = "Ciascai90!1";
+
+        LOG.info("Click 'Login' button");
+        signInPage.clickSignInButton();
+
+        LOG.info("Complete the fields");
+        signInPage.typeInSignInEmailField(email);
+        signInPage.typeInSignInPasswordfield(password);
+
+        LOG.info("Complete the fields");
+        signInPage.typeInSignInEmailField(email);
+        signInPage.typeInsignInPasswordField(password);
+
+        LOG.info("Click Enter button");
+        signInPage.clickEnterButton();
+
+
 
     }
 }
