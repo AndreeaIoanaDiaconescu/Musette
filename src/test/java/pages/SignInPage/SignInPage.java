@@ -18,17 +18,17 @@ public class SignInPage extends BasePage {
         }
         return instance;
     }
-    private By loginInButon = By.id("Login");
-    private By emailField = By.xpath(" ");
-    private By passwordField = By.xpath("//input name=login[password]");
+    private By loginInButton = By.id("Login");
+    private By emailField = By.xpath("//input[@type='email']");
+    private By passwordField = By.xpath("//input[@type='login[password]'");
     private By enterButton = By.id("enter");
 
     public void clickSignInButton() {
         LOG.info("Click 'Login' Button");
-        driver.findElement(signInButton).click();
+        driver.findElement(loginInButton).click();
     }
 
-    public void typeSignInEmailField(String email);{
+    public void typeInSignInEmailField(String email) {
         LOG.info("Typing email address in 'Email' field");
         driver.findElement(emailField).sendKeys(email);
     }

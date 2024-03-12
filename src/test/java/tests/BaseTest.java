@@ -6,7 +6,7 @@ import pages.BasePage;
 import pages.SignInPage.SignInPage;
 
 public class BaseTest {
-    public SignInPage SignInPage = SignInPage.getInstance();
+    public SignInPage signInPage = SignInPage.getInstance();
 
     @BeforeSuite
     public void init() {

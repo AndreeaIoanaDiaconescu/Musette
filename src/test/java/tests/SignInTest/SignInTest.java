@@ -18,11 +18,7 @@ public class SignInTest extends BaseTest {
 
         LOG.info("Complete the fields");
         signInPage.typeInSignInEmailField(email);
-        signInPage.typeInSignInPasswordfield(password);
-
-        LOG.info("Complete the fields");
-        signInPage.typeInSignInEmailField(email);
-        signInPage.typeInsignInPasswordField(password);
+        signInPage.typeInSignInPasswordField(password);
 
         LOG.info("Click Enter button");
         signInPage.clickEnterButton();
