@@ -7,30 +7,28 @@ import tests.BaseTest;
 
 public class NewsLetterTest extends BaseTest {
     public static final Logger LOG = LoggerFactory.getLogger(NewsLetterTest.class);
+    String firstName = "Diaconescu";
+    String lastName = "Andreea";
+    String email = "ciascai.andreea@gmail.com";
+    String day = "17";
+    String month = "5";
+    String year = "1990";
+
 
     @Test
     public void NewsLetterPage(){
 
         LOG.info("Click aboneazate la newsletter");
-        newsLetterPage.clickAboneazateLaNewsLetter();
+        newsLetterPage.clickaboneazateLaNewsLetter();
 
-        LOG.info("Type first name");
-        newsLetterPage.clickFirstNameField();
-
-        LOG.info("Type last name");
-        newsLetterPage.clickLastNameField();
+        LOG.info("Typing full name");
+        newsLetterPage.insertFullName(firstName, lastName);
 
         LOG.info("Type email");
-        newsLetterPage.clickInputEmailNewsLetter();
+        newsLetterPage.clickEmailNewsLetter(email);
 
-        LOG.info("Type 17");
-        newsLetterPage.clickSelectDay();
-
-        LOG.info("Type 5");
-        newsLetterPage.clickSelectMonth();
-
-        LOG.info("Type 1990");
-        newsLetterPage.clickSelectYear();
+        LOG.info("Select date of birth");
+        newsLetterPage.setDayOfBirth(day, month, year);
 
         LOG.info("Click 'Accepta politica de confidentialitate'");
         newsLetterPage.clickAcceptaPoliticaDeConfidentialitate();

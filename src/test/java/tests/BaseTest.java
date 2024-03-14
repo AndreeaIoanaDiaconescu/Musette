@@ -3,10 +3,15 @@ package tests;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 import pages.BasePage;
+import pages.NewsLetterPage.NewsLetterPage;
+import pages.SearchPage.SearchPage;
 import pages.SignInPage.SignInPage;
+import tests.SearchTest.SearchTest;
 
 public class BaseTest {
     public SignInPage signInPage = SignInPage.getInstance();
+    public NewsLetterPage newsLetterPage = NewsLetterPage.getInstance();
+    public SearchPage searchPage = SearchPage.getInstance();
 
     @BeforeSuite
     public void init() {

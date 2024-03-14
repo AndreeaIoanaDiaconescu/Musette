@@ -18,10 +18,10 @@ public class SignInPage extends BasePage {
         }
         return instance;
     }
-    private By loginInButton = By.id("Login");
-    private By emailField = By.xpath("//input[@type='email']");
-    private By passwordField = By.xpath("//input[@type='login[password]'");
-    private By enterButton = By.id("enter");
+    private By loginInButton = By.id("Account_top");
+    private By emailField = By.id("login[username]");
+    private By passwordField = By.id("login[password]");
+    private By enterButton = By.id("Conectare");
 
     public void clickSignInButton() {
         LOG.info("Click 'Login' Button");

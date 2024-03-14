@@ -3,9 +3,10 @@ package pages.SearchPage;
 import org.openqa.selenium.By;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import pages.BasePage;
 import tests.BaseTest;
 
-public class SearchPage extends BaseTest {
+public class SearchPage extends BasePage {
     public static final Logger LOG = LoggerFactory.getLogger(SearchPage.class);
     public static SearchPage instance;
 
@@ -18,25 +19,25 @@ public class SearchPage extends BaseTest {
         }
         return instance;
     }
-    private By searchButton = By.xpath("//div[@class='search_top\"]");
-    private By clickInSearchBar = By.id("Search");
+    private By searchBar = By.id("Search_top");
+    private By searchButton = By.xpath("//div[@class='amsearch-wrapper-input -left-position -bottom-position']");
     private By typelumanare = By.id("Search");
     private By enterButton = By.id("Enterbtn");
     private By selectProduct = By.xpath("//span[@class=product-image-wrapper']");
     private By adaugatiInCos = By.id("Product addtocart button");
 
 
-    public void clickSearchButton(String search) {
-        LOG.info("Click 'Search' button");
-        driver.findElement(clickSearchButton).click();
+    public void clickSearchBar () {
+        LOG.info("Click 'Search' bar");
+        driver.findElement(searchBar).click();
     }
-    public void clickInSearchBar(){
-        LOG.info("Click in 'SearchBar'button");
-        driver.findElement(clickInSearchBar).click();
+    public void clickSearchButton(){
+        LOG.info("Click in 'Search button");
+        driver.findElement(searchButton).click();
     }
-    public void typeLumanareInSearchField(String lumanare){
+    public void typeLumanareInSearchField(){
         LOG.info("Typing lumanare in 'Search' field");
-        driver.findElement(searchField).sendKeys(searchButton);
+        driver.findElement(typelumanare).click();
     }
     public void clickEnterButton(){
         LOG.info("Click Enter button");
@@ -44,11 +45,11 @@ public class SearchPage extends BaseTest {
     }
     public void clickSelectProduct(){
         LOG.info("Click select product");
-        driver.findElement(clickSelectProduct).click();
+        driver.findElement(selectProduct).click();
     }
-    public void adaugatiInCos(){
+    public void clickAdaugatiInCos(){
         LOG.info("Click 'Adaugati in cos' button");
-        driver.findElement(clickAdaugatiInCos).click();
+        driver.findElement(adaugatiInCos).click();
     }
 
 }

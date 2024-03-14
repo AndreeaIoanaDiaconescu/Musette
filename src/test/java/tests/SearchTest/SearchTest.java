@@ -12,10 +12,10 @@ public class SearchTest extends BaseTest {
     public void SearchTest(){
 
         LOG.info("Click 'Search' button");
-        searchPage.clickSearchButton();
+        searchPage.clickSearchBar();
 
         LOG.info("Click in search bar button");
-        searchPage.clickInSearchBar();
+        searchPage.clickSearchButton();
 
         LOG.info("Type 'Lumanare' product ");
         searchPage.typeLumanareInSearchField();
