@@ -7,6 +7,9 @@ import pages.NewsLetterPage.NewsLetterPage;
 import pages.SearchPage.SearchPage;
 import pages.SignInPage.SignInPage;
 import tests.SearchTest.SearchTest;
+import static pages.BasePage.*;
+
+
 
 public class BaseTest {
     public SignInPage signInPage = SignInPage.getInstance();

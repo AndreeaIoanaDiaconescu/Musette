@@ -1,6 +1,7 @@
 package pages.SearchPage;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import pages.BasePage;
@@ -19,29 +20,41 @@ public class SearchPage extends BasePage {
         }
         return instance;
     }
-    private By searchBar = By.id("Search_top");
-    private By searchButton = By.xpath("//div[@class='amsearch-wrapper-input -left-position -bottom-position']");
-    private By typelumanare = By.id("Search");
-    private By enterButton = By.id("Enterbtn");
-    private By selectProduct = By.xpath("//span[@class=product-image-wrapper']");
-    private By adaugatiInCos = By.id("Product addtocart button");
+    private By searchButton = By.xpath("//img[@src='https://static.musette.ro/pub/media/theme/__musette_menu_icons/x2/__06_search_icon.png']");
+    private By searchBar = By.xpath("//input[@placeholder='Ce anume cautati?']");
+//    private By typelumanare = By.xpath("//a[@text()='Lumanare']");
+    private By insertLumanare = By.xpath("//input[@role='combobox']");
+//    private By enterButton = By.xpath("//button[@title='Cautare']");
+    private By acceptConsent = By.xpath("//button[@class='amgdprcookie-button -allow -save']");
+    private By selectProduct = By.xpath("//a[@href='https://musette.ro/lumanare-spring-250-ml-20b39p160831.html']");
+    private By adaugatiInCos = By.xpath("//button[@title='Adaugati in cos']");
+    private By veziCosul = By.xpath("//img[@src='https://static.musette.ro/pub/media/theme/__musette_menu_icons/x2/__05_cos_cumparaturi_icon.png']");
+    private By cosulFinal = By.xpath("//a[@href='https://musette.ro/checkout/cart/']");
 
 
+
+    public void clickSearchButton(){
+        LOG.info("Click in 'Search button");
+        driver.findElement(searchButton).click();
+        sleep( 3000L);
+    }
     public void clickSearchBar () {
         LOG.info("Click 'Search' bar");
         driver.findElement(searchBar).click();
     }
-    public void clickSearchButton(){
-        LOG.info("Click in 'Search button");
-        driver.findElement(searchButton).click();
-    }
-    public void typeLumanareInSearchField(){
+    public void typeLumanareInSearchBar(String toTypeInsearchBox){
         LOG.info("Typing lumanare in 'Search' field");
-        driver.findElement(typelumanare).click();
+        driver.findElement(insertLumanare).sendKeys(toTypeInsearchBox);
+        sleep( 1000L);
     }
     public void clickEnterButton(){
         LOG.info("Click Enter button");
-        driver.findElement(enterButton).click();
+        driver.findElement(insertLumanare).sendKeys(Keys.ENTER);
+        sleep( 3000L);
+    }
+    public void clickAcceptConsent() {
+        LOG.info("Accept consent");
+        driver.findElement(acceptConsent).click();
     }
     public void clickSelectProduct(){
         LOG.info("Click select product");
@@ -50,6 +63,18 @@ public class SearchPage extends BasePage {
     public void clickAdaugatiInCos(){
         LOG.info("Click 'Adaugati in cos' button");
         driver.findElement(adaugatiInCos).click();
+        sleep( 5000L);
     }
+    public void clickVeziCosul(){
+        LOG.info("Click 'Vezi cosul' button");
+        driver.findElement(veziCosul).click();
+        sleep( 5000L);
+    }
+    public void clickCosulFinal(){
+        LOG.info("Click 'Vezi cosul' final");
+        driver.findElement(cosulFinal).click();
+        sleep( 5000L);
+    }
+
 
 }

@@ -18,14 +18,15 @@ public class SignInPage extends BasePage {
         }
         return instance;
     }
-    private By loginInButton = By.id("Account_top");
-    private By emailField = By.id("login[username]");
-    private By passwordField = By.id("login[password]");
-    private By enterButton = By.id("Conectare");
+    private By loginInButton = By.xpath("//img[@title='Login']\n" + "\n");
+    private By emailField = By.id("email");
+    private By passwordField = By.id("pass");
+    private By enterButton = By.id("send2");
 
     public void clickSignInButton() {
         LOG.info("Click 'Login' Button");
         driver.findElement(loginInButton).click();
+        sleep( 3000L);
     }
 
     public void typeInSignInEmailField(String email) {

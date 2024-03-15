@@ -10,24 +10,36 @@ public class SearchTest extends BaseTest {
 
     @Test
     public void SearchTest(){
+        
+        String toTypeInsearchBox = "Lumanare";
 
         LOG.info("Click 'Search' button");
-        searchPage.clickSearchBar();
-
-        LOG.info("Click in search bar button");
         searchPage.clickSearchButton();
 
+
+        LOG.info("Click in search bar button");
+        searchPage.clickSearchBar();
+
         LOG.info("Type 'Lumanare' product ");
-        searchPage.typeLumanareInSearchField();
+        searchPage.typeLumanareInSearchBar(toTypeInsearchBox);
 
         LOG.info("Click Enter button");
         searchPage.clickEnterButton();
+
+        LOG.info("Click Accept Cookies");
+        searchPage.clickAcceptConsent();
 
         LOG.info("Click Select Product");
         searchPage.clickSelectProduct();
 
         LOG.info("Click Adaugati in cos");
         searchPage.clickAdaugatiInCos();
+
+        LOG.info("Click Vezi cosul");
+        searchPage.clickVeziCosul();
+
+        LOG.info("Click Vezi cosul final");
+        searchPage.clickCosulFinal();
 
     }
 }

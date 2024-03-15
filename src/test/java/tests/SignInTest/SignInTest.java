@@ -5,11 +5,14 @@ import org.slf4j.LoggerFactory;
 import org.testng.annotations.Test;
 import tests.BaseTest;
 
+import static pages.BasePage.*;
+
 public class SignInTest extends BaseTest {
     public static final Logger LOG = LoggerFactory.getLogger(SignInTest.class);
 
     @Test
     public void signIn() {
+
         String email = "ciascai.andreea@gmail.com";
         String password = "Ciascai90!1";
 
