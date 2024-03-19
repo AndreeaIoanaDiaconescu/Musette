@@ -5,8 +5,6 @@ import org.slf4j.LoggerFactory;
 import org.testng.annotations.Test;
 import tests.BaseTest;
 
-import static pages.BasePage.*;
-
 public class SignInTest extends BaseTest {
     public static final Logger LOG = LoggerFactory.getLogger(SignInTest.class);
 
@@ -25,8 +23,6 @@ public class SignInTest extends BaseTest {
 
         LOG.info("Click Enter button");
         signInPage.clickEnterButton();
-
-
 
     }
 }

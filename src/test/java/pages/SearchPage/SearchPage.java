@@ -5,7 +5,6 @@ import org.openqa.selenium.Keys;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import pages.BasePage;
-import tests.BaseTest;
 
 public class SearchPage extends BasePage {
     public static final Logger LOG = LoggerFactory.getLogger(SearchPage.class);
@@ -22,16 +21,12 @@ public class SearchPage extends BasePage {
     }
     private By searchButton = By.xpath("//img[@src='https://static.musette.ro/pub/media/theme/__musette_menu_icons/x2/__06_search_icon.png']");
     private By searchBar = By.xpath("//input[@placeholder='Ce anume cautati?']");
-//    private By typelumanare = By.xpath("//a[@text()='Lumanare']");
     private By insertLumanare = By.xpath("//input[@role='combobox']");
-//    private By enterButton = By.xpath("//button[@title='Cautare']");
     private By acceptConsent = By.xpath("//button[@class='amgdprcookie-button -allow -save']");
     private By selectProduct = By.xpath("//a[@href='https://musette.ro/lumanare-spring-250-ml-20b39p160831.html']");
     private By adaugatiInCos = By.xpath("//button[@title='Adaugati in cos']");
     private By veziCosul = By.xpath("//img[@src='https://static.musette.ro/pub/media/theme/__musette_menu_icons/x2/__05_cos_cumparaturi_icon.png']");
     private By cosulFinal = By.xpath("//a[@href='https://musette.ro/checkout/cart/']");
-
-
 
     public void clickSearchButton(){
         LOG.info("Click in 'Search button");

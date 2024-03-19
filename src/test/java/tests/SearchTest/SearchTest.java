@@ -16,7 +16,6 @@ public class SearchTest extends BaseTest {
         LOG.info("Click 'Search' button");
         searchPage.clickSearchButton();
 
-
         LOG.info("Click in search bar button");
         searchPage.clickSearchBar();
 
